@@ -302,7 +302,6 @@ footer p:nth-child(2){
 	bottom: 35px;
 	font-size: 14px; 
 }
-/* Add these styles to your existing CSS */
 
 /* Contact Section Styles */
 .contact-section {
@@ -385,4 +384,58 @@ footer p:nth-child(2){
 	text-align: center;
 	line-height: 26px;
 }
+	/* Existing CSS code */
+
+/* Add the following styles for the Skills page */
+.skills {
+    background: #101010;
+    padding: 100px 0;
+}
+
+.skills .main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.skills h2 {
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill {
+    width: calc(33.33% - 20px);
+    padding: 20px;
+    background: #191919;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skill i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #f9004d;
+}
+
+.skill h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.skill p {
+    color: #fcfcfc;
+    font-size: 18px;
+    line-height: 28px;
+}
+
 }
