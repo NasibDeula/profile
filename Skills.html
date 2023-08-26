@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills - Nasib Deula</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <h2 class="logo">Portfo<span>lio</span></h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section class="skills">
+        <div class="main">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Testing</h3>
+                    <p>Proficient in manual and automated testing techniques to ensure software quality and functionality.</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Documentation</h3>
+                    <p>Experienced in creating comprehensive documentation for test plans, test cases, and test reports.</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Jira</h3>
+                    <p>Skilled in using Jira for issue tracking, project management, and collaboration within agile teams.</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Postman</h3>
+                    <p>Proficient in API testing using Postman to validate endpoints, requests, and responses.</p>
+                </div>
+                <!-- Add more skills as needed -->
+            </div>
+        </div>
+    </section>
+
+     <footer>
+		<p>Nasib Deula</p>
+		<p>Lets connect on social media platforms
+		<div class="social">
+			<a href="https://www.facebook.com/nashib.deula">
+				<i class="fab fa-facebook"></i>
+			</a>
+			<a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.linkedin.com/in/nasib-deula-44b751205/"><i class="fab fa-linkedin"></i></a>
+		</div>
+		<p>&copy;  2023 Nasib Deula. All Rights Reserved</p>
+	</footer>
+<script>
+Smooth scrolling function
+function smoothScroll(target, duration) {
+    var targetElement = document.querySelector(target);
+    var targetPosition = targetElement.getBoundingClientRect().top;
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var ease = Math.easeInOutQuad(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, ease);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+Add smooth scrolling to navigation links
+var aboutLink = document.querySelector('a[href="#about"]');
+aboutLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    smoothScroll('#about', 1000);
+});
+</script>
+</body>
+</html>
