@@ -437,5 +437,32 @@ footer p:nth-child(2){
     font-size: 18px;
     line-height: 28px;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
+}
+/* Larger screens */
+@media screen and (min-width: 768px) {
+    /* Adjust styles for larger screens */
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 767px) {
+    /* Adjust styles for tablets */
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 480px) {
+    /* Adjust styles for mobile devices */
+    body {
+        font-size: 14px;
+    }
 }
